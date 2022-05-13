@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // CAN ONLY RETURN ONE HTML TAG. 
+    // use className for html tags instead of class
+    <Router>
+      {/* Header is in all pages! */}
+      <Header />
+
+      <Routes>
+        {/* Creates route for each page in the application */}
+          <Route exact path="/" element={<h1>Nico's Portfolio</h1>} />
+          <Route exact path="/Projects" element={<Projects />} />
+
+
+
+      </Routes>
+      
+      <Footer />
+      
+    </Router>
   );
 }
 
