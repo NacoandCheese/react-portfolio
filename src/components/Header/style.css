@@ -1,3 +1,19 @@
 #header {
     background-color: burlywood;
+    height: 75px;
+    display: flex;
 }
+
+#header a {
+    margin: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: cadetblue;
+}
+
+#header a:hover {
+    color: blueviolet;
+    transition: 1s;
+}
+
+

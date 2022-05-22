@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import About from './components/About';
+import Contact from './components/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 
@@ -16,8 +18,9 @@ function App() {
 
       <Routes>
         {/* Creates route for each page in the application */}
-          <Route exact path="/" element={<h1>Nico's Portfolio</h1>} />
+          <Route exact path="/" element={<About />} />
           <Route exact path="/Projects" element={<Projects />} />
+          <Route exact path="/Contact" element={<Contact />} />
 
 
 
